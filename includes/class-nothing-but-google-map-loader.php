@@ -124,6 +124,12 @@ class Nothing_But_Google_Map_Loader {
 			add_action( $hook['hook'], array( $hook['component'], $hook['callback'] ), $hook['priority'], $hook['accepted_args'] );
 		}
 
+		$nbwPublic = new Nothing_But_Google_Map_Public();
+
+		$nbwPublic->enqueue_styles();
+		$nbwPublic->enqueue_scripts();
+
+		$nbwPublic->nbw_map();
 	}
 
 }
